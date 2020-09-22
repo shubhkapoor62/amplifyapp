@@ -1,5 +1,4 @@
-import React, {usestate, useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import {listNotes} from './graphql/queries';
@@ -77,7 +76,7 @@ function App() {
               <p>{note.description}</p>
               <button onClick={() => deleteNote(note)}>Delete note</button>
               {
-                note.image && <img src={note.image} style={{width: 400}} />
+                note.image && <img src={note.image} style={{width: 400}} alt="note" />
               }
             </div>
           ))
